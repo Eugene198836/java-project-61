@@ -4,11 +4,9 @@ import java.util.Random;
 
 public class Evengame{
     public static void evenNum(){
-        System.out.println("Welcome to the Brain Games");
-        Scanner yourName = new Scanner(System.in);
-        System.out.print("May I have your name? ");
-        String userName = yourName.next();
-        System.out.println("Hello, " + userName + "!");
+        String name = Greet.mayIhaveYourName();
+
+
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         int i = 3;
@@ -26,7 +24,7 @@ public class Evengame{
             }
         }
         if (i == 0) {
-            System.out.println("Congratulations," + userName);
+            System.out.println("Congratulations," + name + "!");
         }
     }
 

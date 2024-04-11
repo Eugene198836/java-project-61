@@ -4,7 +4,9 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet\n" + "2 - Even\n" + "0 - Exit");
+        System.out.println("1 - Greet\n" + "2 - Even\n" +  "3 - Calc\n" + "0 - Exit");
+
+
 
         Scanner choose = new Scanner(System.in);
         String yourDestiny = choose.next();
@@ -12,15 +14,13 @@ public class App {
         int number = Integer.parseInt(yourDestiny);
         switch (number) {
             case 1:
-                System.out.println("Welcome to the Brain Games");
-                Scanner yourName = new Scanner(System.in);
-                System.out.print("May I have your name? ");
-                String userName = yourName.next();
-                System.out.println("Hello, " + userName + "!");
-                yourName.close();
+                Greet.mayIhaveYourName();
                 break;
             case 2:
                 Evengame.evenNum();
+                break;
+            case 3:
+                Calculator.calculate();
                 break;
             case 0:
                 System.out.println("Good bye");
