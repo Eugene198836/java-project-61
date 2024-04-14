@@ -1,5 +1,6 @@
 package hexlet.code;
 import hexlet.code.game.GCD;
+import hexlet.code.game.Prime;
 import hexlet.code.game.Progression;
 
 import java.util.Scanner;
@@ -7,7 +8,8 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet\n" + "2 - Even\n" +  "3 - Calc\n" + "4 - GCD\n" + "5 - Progression\n" + "0 - Exit");
+        System.out.println("1 - Greet\n" + "2 - Even\n" +  "3 - Calc\n" + "4 - GCD\n" + "5 - Progression\n"
+                + "6 - Prime\n" + "0 - Exit");
 
 
 
@@ -30,6 +32,9 @@ public class App {
                 break;
             case 5:
                 Progression.progression();
+                break;
+            case 6:
+                Prime.primeNumber();
                 break;
             case 0:
                 System.out.println("Good bye");
