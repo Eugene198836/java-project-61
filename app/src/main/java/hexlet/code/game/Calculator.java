@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.game;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -16,7 +16,7 @@ public class Calculator{
             var randomNumber1 = randomNum1.nextInt(100);
             var randomNumber2 = randomNum2.nextInt(100);
             String[] operators = {"+", "-", "*"};
-            int b = randomOper.nextInt(2);
+            int b = randomOper.nextInt(3);
             String randomOperator = operators[b];
 
             int result = 0;
@@ -35,12 +35,17 @@ public class Calculator{
             }
             Scanner inPut = new Scanner(System.in);
             String answer = inPut.next();
-            int a = Integer.parseInt(answer);
+            int answerToNumber = 0;
+            try {
+                answerToNumber = Integer.parseInt(answer);
+            } catch (NumberFormatException e) {
+                System.out.println("Enter the number");
+            }
 
-            if ( result == a) {
+            if ( result == answerToNumber) {
                 System.out.println("Your answer: " + answer);
                 System.out.println("Correct!");
-            } else {
+            } else if (result != answerToNumber) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was " + result);
                 System.out.println("Let's try again," + name + "!");
                 break;

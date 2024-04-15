@@ -1,5 +1,4 @@
 package hexlet.code.game;
-import hexlet.code.Greet;
 
 import java.util.Scanner;
 import java.util.Random;
@@ -22,6 +21,13 @@ public class Prime {
             if ((answer.equalsIgnoreCase("yes") && a == true)
             || (answer.equalsIgnoreCase("no") && a == false)) {
                 System.out.println("Correct!");
+                // как правильно читать след.метод с оператором '!' ?
+            }  else if (!answer.equalsIgnoreCase("yes") && a == true) {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'yes' ! ");
+                break;
+            } else if (!answer.equalsIgnoreCase("yes") && a == false) {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no' ! ");
+                break;
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no' ! ");
                 System.out.println("Let's try again," + name + "!");
