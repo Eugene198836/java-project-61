@@ -30,11 +30,11 @@ public class Evengame{
                 System.out.println("Correct!");
 
 // Вывод на экран сообщения, если даны неправильные ответы.
-            } else if (!"yes".equalsIgnoreCase(answer) && randomNumber % 2 !=0) {
+            } else if (!(answer.equalsIgnoreCase("yes")) & (randomNumber % 2 !=0)) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no'.");
                 System.out.println("Let's try again," + name + "!");
                 break;
-            } else if (!"no".equalsIgnoreCase(answer) && randomNumber % 2 ==0) {
+            } else if (!(answer.equalsIgnoreCase("no")) & (randomNumber % 2 ==0)) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'yes'.");
                 System.out.println("Let's try again," + name + "!");
                 break;
