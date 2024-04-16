@@ -11,6 +11,4 @@ public class Greet {
         System.out.println("Hello, " + userName + "!");
         return userName;
     }
-
-
 }
