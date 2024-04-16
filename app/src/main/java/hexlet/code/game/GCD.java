@@ -18,8 +18,9 @@ public class GCD {
 // Генерция 2 случайных чисел в диапазоне [0 ; 100) и их вывод на экран.
             Random random1 = new Random();
             Random random2 = new Random();
-            int randomNumber1 = random1.nextInt(100);
-            int randomNumber2 = random2.nextInt(100);
+            final int limitOfRandomNumbers = 100;
+            int randomNumber1 = random1.nextInt(limitOfRandomNumbers);
+            int randomNumber2 = random2.nextInt(limitOfRandomNumbers);
             System.out.println("Question: " + randomNumber1 + " " + randomNumber2);
 
 // Ввод в консоль своего ответа.

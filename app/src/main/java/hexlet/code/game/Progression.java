@@ -18,20 +18,24 @@ public class Progression {
             Random replaceN = new Random();
 
 // Создание числа начала последовательности в диапазоне [0 ; 100)
-            int startPoint = startP.nextInt(100);
+            final int limitOfRandomNumbers = 100;
+            int startPoint = startP.nextInt(limitOfRandomNumbers);
 /*
 Создание числа в диапазоне [0 ; 10), на которое будет увеличено каждое
 следующее число в последовательности.
 */
-            int stepPoint = 1 + stepP.nextInt(10);
+            final int limitOfStepNumbers = 10;
+            int stepPoint = 1 + stepP.nextInt(limitOfStepNumbers);
 /*
 Генерация числа ("порядковый номер") в диапазоне [0 ; 10], по которому
 в последовательности будет замещено число символом ".." .
  */
-            int replaceNumber = replaceN.nextInt(10);
+            final int limitOfReplaceNumbers = 10;
+            int replaceNumber = replaceN.nextInt(limitOfReplaceNumbers);
 
 // Создание массива ("последовательность чисел") из 10 элементов и заполнение его значениями.
-            int[] numberLine = new int[10];
+            final int lengthOfArray = 10;
+            int[] numberLine = new int[lengthOfArray];
             numberLine[0] = startPoint;
 
             for (int j = 1; j < 10; j++) {

@@ -15,7 +15,8 @@ public class Prime {
 
 // Генерация случайного числа в диапазоне [0 ; 100)  и его вывод на экран.
             Random rand = new Random();
-            int randomNumber = rand.nextInt(100);
+            final int limitOfRandomNumbers = 100;
+            int randomNumber = rand.nextInt(limitOfRandomNumbers);
             System.out.println("Question: " + randomNumber);
 // Ввод в консоль ответа.
             Scanner inPut = new Scanner(System.in);
@@ -27,8 +28,8 @@ public class Prime {
                 if (a == true) {
                     System.out.println("Correct!");
                 } else if (a == false) {
-                    System.out.println("'" + answer + "' is wrong answer ;(. " +
-                            "Correct answer was 'no' ! ");
+                    System.out.println("'" + answer + "' is wrong answer ;(. "
+                            + "Correct answer was 'no' ! ");
                     System.out.println("Let's try again, " + name + "!");
                     break;
                 }
@@ -37,8 +38,8 @@ public class Prime {
                 if (a == false) {
                         System.out.println("Correct!");
                     } else if (a == true) {
-                        System.out.println("'" + answer + "' is wrong answer ;(. " +
-                                "Correct answer was 'yes' ! ");
+                        System.out.println("'" + answer + "' is wrong answer ;(. "
+                                + "Correct answer was 'yes' ! ");
                         break;
                     }
             }

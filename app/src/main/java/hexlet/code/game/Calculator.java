@@ -17,8 +17,9 @@ public class Calculator {
             Random randomOper = new Random();
             Random randomNum1 = new Random();
             Random randomNum2 = new Random();
-            var randomNumber1 = randomNum1.nextInt(100);
-            var randomNumber2 = randomNum2.nextInt(100);
+            final int limitOfRandomNumbers = 100;
+            var randomNumber1 = randomNum1.nextInt(limitOfRandomNumbers);
+            var randomNumber2 = randomNum2.nextInt(limitOfRandomNumbers);
 
 // Создание массива, где хранятся операторы арифметические операций.
             String[] operators = {"+", "-", "*"};
@@ -73,7 +74,5 @@ public class Calculator {
         if (i == 0) {
             System.out.println("Congratulations, " + name + "!");
         }
-
     }
-
 }
