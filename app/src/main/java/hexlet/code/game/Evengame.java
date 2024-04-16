@@ -18,29 +18,32 @@ public class Evengame{
             Random rand = new Random();
             int randomNumber = rand.nextInt(100);
             System.out.println("Question: " + randomNumber);
-            String answer = null;
+
 
 // Ввод в консоль своего ответа.
-            try {
                 Scanner inPut = new Scanner(System.in);
-                answer = inPut.next();
-            } catch (Exception e) {
-                System.out.println("Enter \"yes\" or \"no\".");
+                String answer = inPut.next();
+
+            if (!answer.equalsIgnoreCase("yes") & !answer.equalsIgnoreCase("no")) {
+                System.out.println("\"Enter \"yes\" or \"no\".");
+                System.out.println("Let's try again," + name + "!");
+                break;
             }
 
 
 // Сравнение введенного слова с правильным вариантом ответа и его вывод на экран.
 // Вывод на экран сообщения, если даны правильные ответы.
-            if ((answer.equalsIgnoreCase("yes") && randomNumber % 2 ==0) ||
-                    (answer.equalsIgnoreCase("no") && randomNumber % 2 !=0)) {
+            if (answer.equalsIgnoreCase("yes") & randomNumber % 2 ==0) {
+                System.out.println("Correct!");
+            } else if (answer.equalsIgnoreCase("no") & randomNumber % 2 !=0) {
                 System.out.println("Correct!");
 
 // Вывод на экран сообщения, если даны неправильные ответы.
-            } else if (!(answer.equalsIgnoreCase("yes")) & (randomNumber % 2 !=0)) {
+            }else if (answer.equalsIgnoreCase("yes") & randomNumber % 2 !=0) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no'.");
                 System.out.println("Let's try again," + name + "!");
                 break;
-            } else if (!(answer.equalsIgnoreCase("no")) & (randomNumber % 2 ==0)) {
+            } else if (answer.equalsIgnoreCase("no") & randomNumber % 2 ==0) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'yes'.");
                 System.out.println("Let's try again," + name + "!");
                 break;
