@@ -46,7 +46,7 @@ public class Progression {
             System.out.print("Question: ");
             for (int k = 0; k < 10; k++) {
                 if (numberLine[k] == numberLine[replaceNumber]) {
-                    System.out.print("..");
+                    System.out.print(".. ");
                 } else {
                     System.out.print(numberLine[k] + " ");
                 }
