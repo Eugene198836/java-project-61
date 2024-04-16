@@ -23,9 +23,7 @@ public class App {
         } catch (NumberFormatException e) {
             System.out.println("Please enter the game number and press Enter.");
             System.out.println("Let's try again!");
-
         }
-
         switch (number) {
             case 1:
                 Greet.mayIhaveYourName();

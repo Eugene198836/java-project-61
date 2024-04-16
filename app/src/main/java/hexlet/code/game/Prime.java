@@ -34,9 +34,11 @@ public class Prime {
                                                                                     // как правильно читать след.метод с оператором '!' ?
             }  else if (!answer.equalsIgnoreCase("yes") && a == true) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'yes' ! ");
+                System.out.println("Let's try again, " + name + "!");
                 break;
             } else if (!answer.equalsIgnoreCase("yes") && a == false) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no' ! ");
+                System.out.println("Let's try again, " + name + "!");
                 break;
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no' ! ");

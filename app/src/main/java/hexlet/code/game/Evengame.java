@@ -24,6 +24,7 @@ public class Evengame{
                 Scanner inPut = new Scanner(System.in);
                 String answer = inPut.next();
 
+//Вывод собщения, если введны ответы, отличные от 'yes' и 'no'.
             if (!answer.equalsIgnoreCase("yes") & !answer.equalsIgnoreCase("no")) {
                 System.out.println("\"Enter \"yes\" or \"no\".");
                 System.out.println("Let's try again, " + name + "!");
