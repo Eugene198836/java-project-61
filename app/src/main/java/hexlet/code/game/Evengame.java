@@ -44,7 +44,7 @@ public class Evengame{
 
 // Вывод на экран поздравления, если даны 3 правильных ответа.
         if (i == 0) {
-            System.out.println("Congratulations," + name + "!");
+            System.out.println("Congratulations, " + name + "!");
         }
     }
 

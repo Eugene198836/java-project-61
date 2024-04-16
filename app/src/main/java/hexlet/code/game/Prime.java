@@ -18,7 +18,7 @@ public class Prime {
 // Генерация случайного числа в диапазоне [0 ; 100)  и его вывод на экран.
             Random rand = new Random();
             int randomNumber = rand.nextInt(100);
-            System.out.println("Question " + randomNumber);
+            System.out.println("Question: " + randomNumber);
 
 // Ввод в консоль ответа.
             Scanner inPut = new Scanner(System.in);
@@ -46,7 +46,7 @@ public class Prime {
             i--;
         }
         if (i == 0) {
-            System.out.println("Congratulations," + name + "!");
+            System.out.println("Congratulations, " + name + "!");
         }
     }
 }

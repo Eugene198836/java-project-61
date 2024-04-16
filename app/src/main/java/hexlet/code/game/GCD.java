@@ -21,7 +21,7 @@ public class GCD {
             Random random2 = new Random();
             int randomNumber1 = random1.nextInt(100) ;
             int randomNumber2 = random2.nextInt(100);
-            System.out.println("Question " + randomNumber1 + " " + randomNumber2);
+            System.out.println("Question: " + randomNumber1 + " " + randomNumber2);
 
 // Ввод в консоль своего ответа.
             Scanner inPut = new Scanner(System.in);
@@ -52,7 +52,7 @@ public class GCD {
 
 // Вывод на экран поздравления, если даны 3 правильных ответа.
         if (i == 0) {
-            System.out.println("Congratulations," + name + "!");
+            System.out.println("Congratulations, " + name + "!");
         }
 
     }
