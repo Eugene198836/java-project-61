@@ -18,10 +18,16 @@ public class Evengame{
             Random rand = new Random();
             int randomNumber = rand.nextInt(100);
             System.out.println("Question: " + randomNumber);
+            String answer = null;
 
 // Ввод в консоль своего ответа.
-            Scanner inPut = new Scanner(System.in);
-            String answer = inPut.next();
+            try {
+                Scanner inPut = new Scanner(System.in);
+                answer = inPut.next();
+            } catch (Exception e) {
+                System.out.println("Enter \"yes\" or \"no\".");
+            }
+
 
 // Сравнение введенного слова с правильным вариантом ответа и его вывод на экран.
 // Вывод на экран сообщения, если даны правильные ответы.
