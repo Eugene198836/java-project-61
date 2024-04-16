@@ -25,9 +25,9 @@ public class Prime {
             boolean a = Primechecker.primeCheck(randomNumber);
 // Сравнение введенного ответа с правильным и вывод соответствующего сообщения.
             if (answer.equalsIgnoreCase("yes")) {
-                if (a = true) {
+                if (a == true) {
                     System.out.println("Correct!");
-                } else if (a = false) {
+                } else if (a == false) {
                     System.out.println("'" + answer + "' is wrong answer ;(. "
                             + "Correct answer was 'no' ! ");
                     System.out.println("Let's try again, " + name + "!");
@@ -35,9 +35,9 @@ public class Prime {
                 }
             }
             if (answer.equalsIgnoreCase("no")) {
-                if (a = false) {
+                if (a == false) {
                     System.out.println("Correct!");
-                } else if (a = true) {
+                } else if (a == true) {
                     System.out.println("'" + answer + "' is wrong answer ;(. "
                             + "Correct answer was 'yes' ! ");
                     System.out.println("Let's try again, " + name + "!");
