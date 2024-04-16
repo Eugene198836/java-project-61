@@ -1,5 +1,4 @@
 package hexlet.code.game;
-
 import java.util.Scanner;
 import java.util.Random;
 import hexlet.code.FindGCD;
@@ -19,7 +18,7 @@ public class GCD {
 // Генерция 2 случайных чисел в диапазоне [0 ; 100) и их вывод на экран.
             Random random1 = new Random();
             Random random2 = new Random();
-            int randomNumber1 = random1.nextInt(100) ;
+            int randomNumber1 = random1.nextInt(100);
             int randomNumber2 = random2.nextInt(100);
             System.out.println("Question: " + randomNumber1 + " " + randomNumber2);
 
@@ -36,10 +35,10 @@ public class GCD {
             }
 
 // Вычисление наибольшего общего делителя ранее сгенерированных чисел.
-            int gcdnumber = FindGCD.calculateGCD(randomNumber1,randomNumber2);
+            int gcdnumber = FindGCD.calculateGCD(randomNumber1, randomNumber2);
 
 // Сравнение введенного ответа с правильным и вывод соответствующего сообщения.
-            if ( gcdnumber == answerToNumber) {
+            if (gcdnumber == answerToNumber) {
                 System.out.println("Your answer: " + answer);
                 System.out.println("Correct!");
             } else {

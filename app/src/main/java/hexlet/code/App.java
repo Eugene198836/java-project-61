@@ -1,5 +1,10 @@
 package hexlet.code;
-import hexlet.code.game.*;
+import hexlet.code.game.Greet;
+import hexlet.code.game.Evengame;
+import hexlet.code.game.Calculator;
+import hexlet.code.game.GCD;
+import hexlet.code.game.Progression;
+import hexlet.code.game.Prime;
 import java.util.Scanner;
 
 public class App {
@@ -44,6 +49,8 @@ public class App {
                 Prime.primeNumber();
                 break;
             case 0:
+                break;
+            default:
                 break;
         }
 

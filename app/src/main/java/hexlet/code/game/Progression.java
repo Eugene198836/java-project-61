@@ -1,5 +1,4 @@
 package hexlet.code.game;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -35,8 +34,8 @@ public class Progression {
             int[] numberLine = new int[10];
             numberLine[0] = startPoint;
 
-            for(int j = 1; j < 10; j++) {
-                numberLine[j] = numberLine[j-1] + stepPoint;
+            for (int j = 1; j < 10; j++) {
+                numberLine[j] = numberLine[j - 1] + stepPoint;
             }
 
 // Создаем переменную, которая "запоминает" какое число в последовательности было замещено.

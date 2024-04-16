@@ -1,9 +1,7 @@
 package hexlet.code.game;
 import java.util.Scanner;
 import java.util.Random;
-
-
-public class Calculator{
+public class Calculator {
     public static void calculate() {
 
 // Вывод на экран приветствия.
@@ -43,6 +41,8 @@ public class Calculator{
                 case "*" :
                     result = randomNumber1 * randomNumber2;
                     System.out.println("Question: " + randomNumber1 + " * " + randomNumber2);
+                default:
+                    break;
             }
 
 // Ввод в консоль своего ответа
@@ -58,7 +58,7 @@ public class Calculator{
             }
 
 // Сравнение введенного ответа с правильным и вывод соответствующего сообщения.
-            if ( result == answerToNumber) {
+            if (result == answerToNumber) {
                 System.out.println("Your answer: " + answer);
                 System.out.println("Correct!");
             } else if (result != answerToNumber) {
