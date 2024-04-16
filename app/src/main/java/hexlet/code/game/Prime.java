@@ -23,23 +23,27 @@ public class Prime {
 // Определяем, является ли ранее сгенерированное число простым.
             boolean a = Primechecker.primeCheck(randomNumber);
 // Сравнение введенного ответа с правильным и вывод соответствующего сообщения.
-            if (answer.equalsIgnoreCase("yes") && a == true) {
-                System.out.println("Correct!");
-            } else if (answer.equalsIgnoreCase("no") && a == false) {
-                System.out.println("Correct!");
-            } else if (!answer.equalsIgnoreCase("yes") && a == true) {
-                System.out.println("'" + answer + "' is wrong answer ;(. " +
-                        "Correct answer was 'yes' ! ");
-                System.out.println("Let's try again, " + name + "!");
-                break;
-            } else if (!answer.equalsIgnoreCase("yes") && a == false) {
-                System.out.println("'" + answer + "' is wrong answer ;(. " +
-                        "Correct answer was 'no' ! ");
-                System.out.println("Let's try again, " + name + "!");
-                break;
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. " +
-                        "Correct answer was 'no' ! ");
+            if (answer.equalsIgnoreCase("yes")) {
+                if (a == true) {
+                    System.out.println("Correct!");
+                } else if (a == false) {
+                    System.out.println("'" + answer + "' is wrong answer ;(. " +
+                            "Correct answer was 'no' ! ");
+                    System.out.println("Let's try again, " + name + "!");
+                    break;
+                }
+            }
+            if (answer.equalsIgnoreCase("no")) {
+                if (a == false) {
+                        System.out.println("Correct!");
+                    } else if (a == true) {
+                        System.out.println("'" + answer + "' is wrong answer ;(. " +
+                                "Correct answer was 'yes' ! ");
+                        break;
+                    }
+            }
+            if (!answer.equalsIgnoreCase("yes") & !answer.equalsIgnoreCase("no")) {
+                System.out.println("\"Enter \"yes\" or \"no\".");
                 System.out.println("Let's try again, " + name + "!");
                 break;
             }
