@@ -1,3 +1,4 @@
+
 package hexlet.code.game;
 
 import java.util.Scanner;
@@ -8,8 +9,8 @@ public class Evengame {
         String name = Greet.mayIhaveYourName();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 // Запуск цикла для вывода на экран "вопросов". Необходимо ответить правильно 3 раза.
-        int count = 3;
-        while (count > 0) {
+        int NUMBER_OF_QUESTIONS = 3;
+        while (NUMBER_OF_QUESTIONS > 0) {
 // Генерация случайного числа в пределах  [0 ; 100) и его вывод на экран.
             Random rand = new Random();
             int randomNumber = rand.nextInt(100);
@@ -39,10 +40,10 @@ public class Evengame {
                 System.out.println("Let's try again, " + name + "!");
                 break;
             }
-                count--;
+                NUMBER_OF_QUESTIONS--;
         }
 // Вывод на экран поздравления, если даны 3 правильных ответа.
-        if (count == 0) {
+        if (NUMBER_OF_QUESTIONS== 0) {
             System.out.println("Congratulations, " + name + "!");
         }
     }
