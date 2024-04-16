@@ -17,7 +17,7 @@ public class Evengame{
 // Генерация случайного числа в пределах  [0 ; 100) и его вывод на экран.
             Random rand = new Random();
             int randomNumber = rand.nextInt(100);
-            System.out.println("Question " + randomNumber);
+            System.out.println("Question: " + randomNumber);
 
 // Ввод в консоль своего ответа.
             Scanner inPut = new Scanner(System.in);
