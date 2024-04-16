@@ -11,8 +11,8 @@ public class Progression {
 
 // Запуск цикла для вывода на экран "вопросов". Необходимо ответить правильно 3 раза.
 // Будут сгенерированы числа для создания последовательности чисел.
-        int i = 3;
-        while (i > 0) {
+        final int numberOfQuestios = 2;
+        for (int i = 0; i <= numberOfQuestios; i++) {
             Random startP = new Random();
             Random stepP = new Random();
             Random replaceN = new Random();
@@ -76,12 +76,10 @@ public class Progression {
                 System.out.println("Let's try again, " + name + "!");
                 break;
             }
-            i--;
-        }
-
 // Вывод на экран поздравления, если даны 3 правильных ответа.
-        if (i == 0) {
-            System.out.println("Congratulations, " + name + "!");
+            if (i == numberOfQuestios) {
+                System.out.println("Congratulations, " + name + "!");
+            }
         }
     }
 }

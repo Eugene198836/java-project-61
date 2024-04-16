@@ -10,8 +10,8 @@ public class Calculator {
 
 // Запуск цикла для вывода на экран "вопросов". Необходимо ответить правильно 3 раза.
 // Будут сгенерированы случайные числа и оператор вычислений.
-        int i = 3;
-        while (i > 0) {
+        final int numberOfQuestios = 2;
+        for (int i = 0; i <= numberOfQuestios; i++) {
 
 // Генерция 2 случайных чисел в диапазоне [0 ; 100).
             Random randomOper = new Random();
@@ -67,12 +67,10 @@ public class Calculator {
                 System.out.println("Let's try again, " + name + "!");
                 break;
             }
-            i--;
-        }
-
 // Вывод на экран поздравления, если даны 3 правильных ответа.
-        if (i == 0) {
-            System.out.println("Congratulations, " + name + "!");
+            if (i == numberOfQuestios) {
+                System.out.println("Congratulations, " + name + "!");
+            }
         }
     }
 }

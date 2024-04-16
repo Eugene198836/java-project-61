@@ -10,8 +10,8 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
 // Запуск цикла для вывода на экран "вопросов". Необходимо ответить правильно 3 раза.
-        int i = 3;
-        while (i > 0) {
+        final int numberOfQuestios = 2;
+        for (int i = 0; i <= numberOfQuestios; i++) {
 
 // Генерация случайного числа в диапазоне [0 ; 100)  и его вывод на экран.
             Random rand = new Random();
@@ -50,10 +50,9 @@ public class Prime {
                 System.out.println("Let's try again, " + name + "!");
                 break;
             }
-            i--;
-        }
-        if (i == 0) {
-            System.out.println("Congratulations, " + name + "!");
+            if (i == numberOfQuestios) {
+                System.out.println("Congratulations, " + name + "!");
+            }
         }
     }
 }
