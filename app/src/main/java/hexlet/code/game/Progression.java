@@ -38,7 +38,7 @@ public class Progression {
             int[] numberLine = new int[lengthOfArray];
             numberLine[0] = startPoint;
 
-            for (int j = 1; j < 10; j++) {
+            for (int j = 1; j < lengthOfArray; j++) {
                 numberLine[j] = numberLine[j - 1] + stepPoint;
             }
 
@@ -47,7 +47,7 @@ public class Progression {
 
 // Вывод на экран последовательности чисел, где случайным образом замещено число.
             System.out.print("Question: ");
-            for (int k = 0; k < 10; k++) {
+            for (int k = 0; k < lengthOfArray; k++) {
                 if (numberLine[k] == numberLine[replaceNumber]) {
                     System.out.print(".. ");
                 } else {
