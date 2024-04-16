@@ -25,7 +25,8 @@ public class Calculator {
             String[] operators = {"+", "-", "*"};
 
 // Генерация случайного числа, по которому операторы будут выбираться из массива.
-            int b = randomOper.nextInt(3);
+            final int numberOfOperators = 3;
+            int b = randomOper.nextInt(numberOfOperators);
             String randomOperator = operators[b];
 
 // Выбор операций по сгенерированным ранее числам в зависимости от выбранного оператора.

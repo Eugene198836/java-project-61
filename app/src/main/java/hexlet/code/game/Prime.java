@@ -50,6 +50,7 @@ public class Prime {
                 System.out.println("Let's try again, " + name + "!");
                 break;
             }
+// Вывод на экран поздравления, если даны 3 правильных ответа.
             if (i == numberOfQuestios) {
                 System.out.println("Congratulations, " + name + "!");
             }
