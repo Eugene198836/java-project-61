@@ -70,7 +70,7 @@ public class Progression {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was " + temp);
-                System.out.println("Let's try again," + name + "!");
+                System.out.println("Let's try again, " + name + "!");
                 break;
             }
             i--;

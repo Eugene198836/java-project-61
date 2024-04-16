@@ -44,7 +44,7 @@ public class GCD {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was " + gcdnumber);
-                System.out.println("Let's try again," + name + "!");
+                System.out.println("Let's try again, " + name + "!");
                 break;
             }
             i--;

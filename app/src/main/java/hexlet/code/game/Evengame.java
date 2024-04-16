@@ -26,7 +26,7 @@ public class Evengame{
 
             if (!answer.equalsIgnoreCase("yes") & !answer.equalsIgnoreCase("no")) {
                 System.out.println("\"Enter \"yes\" or \"no\".");
-                System.out.println("Let's try again," + name + "!");
+                System.out.println("Let's try again, " + name + "!");
                 break;
             }
 
@@ -41,11 +41,11 @@ public class Evengame{
 // Вывод на экран сообщения, если даны неправильные ответы.
             }else if (answer.equalsIgnoreCase("yes") & randomNumber % 2 !=0) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no'.");
-                System.out.println("Let's try again," + name + "!");
+                System.out.println("Let's try again, " + name + "!");
                 break;
             } else if (answer.equalsIgnoreCase("no") & randomNumber % 2 ==0) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'yes'.");
-                System.out.println("Let's try again," + name + "!");
+                System.out.println("Let's try again, " + name + "!");
                 break;
             }
                 i--;
