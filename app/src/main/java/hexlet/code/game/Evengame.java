@@ -9,8 +9,8 @@ public class Evengame {
         String name = Greet.mayIhaveYourName();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 // Запуск цикла для вывода на экран "вопросов". Необходимо ответить правильно 3 раза.
-        int nuberOfQuestios= 3;
-        while (nuberOfQuestios> 0) {
+        int numberOfQuestios = 3;
+        while (numberOfQuestios > 0) {
 // Генерация случайного числа в пределах  [0 ; 100) и его вывод на экран.
             Random rand = new Random();
             int randomNumber = rand.nextInt(100);
@@ -40,10 +40,10 @@ public class Evengame {
                 System.out.println("Let's try again, " + name + "!");
                 break;
             }
-                nuberOfQuestios--;
+                numberOfQuestios--;
         }
 // Вывод на экран поздравления, если даны 3 правильных ответа.
-        if (nuberOfQuestios== 0) {
+        if (numberOfQuestios== 0) {
             System.out.println("Congratulations, " + name + "!");
         }
     }
