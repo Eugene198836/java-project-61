@@ -29,26 +29,26 @@ public class App {
             System.out.println("Please enter the game number and press Enter.");
             System.out.println("Let's try again!");
         }
-        switch (number) {
-            case 1:
+        switch (yourDestiny) {
+            case "1":
                 Greet.mayIhaveYourName();
                 break;
-            case 2:
+            case "2":
                 Evengame.evenNum();
                 break;
-            case 3:
+            case "3":
                 Calculator.calculate();
                 break;
-            case 4:
+            case "4":
                 GCD.gcd();
                 break;
-            case 5:
+            case "5":
                 Progression.progression();
                 break;
-            case 6:
+            case "6":
                 Prime.primeNumber();
                 break;
-            case 0:
+            case "0":
                 break;
             default:
                 break;

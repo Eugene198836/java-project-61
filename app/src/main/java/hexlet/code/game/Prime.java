@@ -23,10 +23,11 @@ public class Prime {
 // Определяем, является ли ранее сгенерированное число простым.
             boolean a = Primechecker.primeCheck(randomNumber);
 // Сравнение введенного ответа с правильным и вывод соответствующего сообщения.
-            if ((answer.equalsIgnoreCase("yes") && a == true)
-            || (answer.equalsIgnoreCase("no") && a == false)) {
-                System.out.println("Correct!");                                                                                    // как правильно читать след.метод с оператором '!' ?
-            }  else if (!answer.equalsIgnoreCase("yes") && a == true) {
+            if (answer.equalsIgnoreCase("yes") && a == true) {
+                System.out.println("Correct!");
+            } else if (answer.equalsIgnoreCase("no") && a == false) {
+                System.out.println("Correct!");
+            } else if (!answer.equalsIgnoreCase("yes") && a == true) {
                 System.out.println("'" + answer + "' is wrong answer ;(. " +
                         "Correct answer was 'yes' ! ");
                 System.out.println("Let's try again, " + name + "!");
