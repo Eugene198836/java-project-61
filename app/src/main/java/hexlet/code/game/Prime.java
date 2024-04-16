@@ -40,6 +40,7 @@ public class Prime {
                     } else if (a == true) {
                         System.out.println("'" + answer + "' is wrong answer ;(. "
                                 + "Correct answer was 'yes' ! ");
+                    System.out.println("Let's try again, " + name + "!");
                         break;
                     }
             }
