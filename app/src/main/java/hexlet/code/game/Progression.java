@@ -29,7 +29,7 @@ public class Progression {
 Генерация числа ("порядковый номер") в диапазоне [0 ; 10], по которому
 в последовательности будет замещено число символом ".." .
  */
-            int replaceNumber = replaceN.nextInt(11);
+            int replaceNumber = replaceN.nextInt(10);
 
 // Создание массива ("последовательность чисел") из 10 элементов и заполнение его значениями.
             int[] numberLine = new int[10];
