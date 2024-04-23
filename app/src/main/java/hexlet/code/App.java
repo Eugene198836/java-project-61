@@ -23,7 +23,7 @@ public class App {
 
         switch (yourDestiny) {
             case "1":
-                Greet.mayIhaveYourName();
+                Greet.introduce();
                 break;
             case "2":
                 Evengame.evenNum();
