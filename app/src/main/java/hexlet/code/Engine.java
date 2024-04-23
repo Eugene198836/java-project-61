@@ -18,7 +18,7 @@ public class Engine {
             String answer;
             int result = 0;
             var random = Util.random(limitOfRandomNumbers);
-            System.out.println("Question: " + random);// Вывод на экран вопроса.
+            System.out.println("Question: " + random); // Вывод на экран вопроса.
             //В зависимости от переданного в метод параметра, будет вычисляться результат - правильный ответ - с которым
 //будет сравниваться введенный ответ.
             if (methodName.equalsIgnoreCase("Even")) {
@@ -28,7 +28,7 @@ public class Engine {
             }
 //Ввод своего ответа.
             answer = readPhrase(userName);
-            compareStringValues(answer, userName, logResult);// Сравнение введенного ответа с правильным.
+            compareStringValues(answer, userName, logResult); // Сравнение введенного ответа с правильным.
             if (i == numberOfAnswers) {
                 System.out.println("Congratulations, " + userName + "!");
             }
@@ -67,7 +67,8 @@ public class Engine {
             }
             compareIntValues(answerToNumber, result, answer, userName); // Сравнение введенного ответа с правильным.
             if (i == numberOfAnswers) {
-                System.out.println("Congratulations, " + userName + "!");// Сообщение-поздравление, если даны 3 правильнрых ответа.
+                System.out.println("Congratulations, " + userName + "!"); // Сообщение-поздравление, если
+                // даны 3 правильнрых ответа.
             }
         }
     }

@@ -8,7 +8,7 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         Engine.checkStringValues(name, "Prime");
     }
-    public static boolean primeCheck(int numb) {// определяем простое число и возвращаем результат для сравнения.
+    public static boolean primeCheck(int numb) { // определяем простое число и возвращаем результат для сравнения.
         if (numb < 2) {
             return false;
         }

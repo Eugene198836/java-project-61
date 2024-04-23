@@ -8,11 +8,12 @@ public class Calculator {
         System.out.println("What is the result of the expression?");
         Engine.checkIntValues(name, "Calc");
     }
-    public static int randomExpression() {// Метод для генерации случайных арифметических выражений. Возвращает
+    public static int randomExpression() { // Метод для генерации случайных арифметических выражений. Возвращает
         // результат вычислений для сравнения.
         final int limitOfNumbers = 100;
         final int limitOfOperators = 3;
-        var randomNumber1 = Util.random(limitOfNumbers);//Генерируем случайные числа и случайный порядковый номер операции из массива.
+        var randomNumber1 = Util.random(limitOfNumbers); //Генерируем случайные числа и
+        // случайный порядковый номер операции из массива.
         var randomnumber2 = Util.random(limitOfNumbers);
         var randomnumber3 = Util.random(limitOfOperators);
         String[] operators = {"+", "-", "*"};
@@ -22,7 +23,8 @@ public class Calculator {
     }
 
     private static int create(String randomOperator, int randomNumber1, int randomNumber2) {
-        //На основе ранее сгенерированных чисел формирует выражение, выводим на экран. Результат вычислений будет передан для сравнений.
+        //На основе ранее сгенерированных чисел формирует выражение, выводим на экран.
+        // Результат вычислений будет передан для сравнений.
         if (randomOperator.equals("+")) {
             System.out.println("Question: " + randomNumber1 + " + " + randomNumber2);
             return randomNumber1 + randomNumber2;
