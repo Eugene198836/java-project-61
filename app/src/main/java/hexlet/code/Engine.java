@@ -1,7 +1,9 @@
 package hexlet.code;
-import hexlet.code.Util;
-import hexlet.code.game.*;
-
+import hexlet.code.game.Calculator;
+import hexlet.code.game.Evengame;
+import hexlet.code.game.GCD;
+import hexlet.code.game.Prime;
+import hexlet.code.game.Progression;
 import java.util.Scanner;
 
 public class Engine {
@@ -15,11 +17,11 @@ public class Engine {
             boolean logResult = false;
             String answer;
             int result = 0;
-            var random = Util.random(100);
+            var random = Util.random(limitOfRandomNumbers);
             System.out.println("Question: " + random);
             if (methodName.equalsIgnoreCase("Even")) {
                 logResult = Evengame.evenCheker(random);
-            } else if (methodName.equalsIgnoreCase("Prime")){
+            } else if (methodName.equalsIgnoreCase("Prime")) {
                 logResult = Prime.primeCheck(random);
             }
             answer = readPhrase(userName);
@@ -45,7 +47,9 @@ public class Engine {
                 result = GCD.createGCD();
             } else if (methodName.equalsIgnoreCase("Progression")) {
                 result = Progression.arrayExpression();
-            } else break;
+            } else {
+                break;
+            }
 
             Scanner inPut = new Scanner(System.in);
             answer = inPut.next();

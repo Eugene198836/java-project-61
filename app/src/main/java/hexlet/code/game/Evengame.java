@@ -1,10 +1,5 @@
-
 package hexlet.code.game;
-
 import hexlet.code.Engine;
-
-import java.util.Scanner;
-import java.util.Random;
 public class Evengame {
     public static void evenNum() {
 // Вывод на экран приветствия.

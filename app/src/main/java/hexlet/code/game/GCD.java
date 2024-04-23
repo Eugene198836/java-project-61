@@ -1,9 +1,5 @@
 package hexlet.code.game;
-import java.util.Scanner;
-import java.util.Random;
-
 import hexlet.code.Engine;
-
 import hexlet.code.Util;
 
 public class GCD {
@@ -25,7 +21,7 @@ public class GCD {
         final int limitOfRandomNumbers = 100;
         var random1 = Util.random(limitOfRandomNumbers);
         var random2 = Util.random(limitOfRandomNumbers);
-        System.out.println("Question: " + random1 + " " + random2 );
+        System.out.println("Question: " + random1 + " " + random2);
         var result = GCD.calculateGCD(random1, random2);
         return result;
     }

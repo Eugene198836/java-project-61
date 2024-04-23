@@ -1,9 +1,6 @@
 package hexlet.code.game;
 import hexlet.code.Engine;
 import hexlet.code.Util;
-
-import java.util.Scanner;
-import java.util.Random;
 public class Calculator {
     public static void calculate() {
 // Вывод на экран приветствия.
@@ -19,7 +16,7 @@ public class Calculator {
         var randomnumber3 = Util.random(limitOfOperators);
         String[] operators = {"+", "-", "*"};
         String randomOperator = operators[randomnumber3];
-        var result = create(randomOperator,randomNumber1,randomnumber2);
+        var result = create(randomOperator, randomNumber1, randomnumber2);
         return result;
     }
 
@@ -33,7 +30,9 @@ public class Calculator {
         } else if (randomOperator.equals("*")) {
             System.out.println("Question: " + randomNumber1 + " * " + randomNumber2);
             return randomNumber1 * randomNumber2;
-        } else return 0;
+        } else {
+            return 0;
+        }
     }
 
 }

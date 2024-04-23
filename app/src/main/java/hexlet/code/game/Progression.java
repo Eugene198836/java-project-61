@@ -1,10 +1,6 @@
 package hexlet.code.game;
 import hexlet.code.Engine;
 import hexlet.code.Util;
-
-import java.util.Random;
-import java.util.Scanner;
-
 public class Progression {
     public static void progression() {
 
