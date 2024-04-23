@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 import hexlet.code.Engine;
-import hexlet.code.FindGCD;
+
 import hexlet.code.Util;
 
 public class GCD {

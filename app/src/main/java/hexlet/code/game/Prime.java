@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 import hexlet.code.Engine;
-import hexlet.code.Primechecker;
+
 public class Prime {
     public static void primeNumber() {
 // Вывод на экран приветствия.
