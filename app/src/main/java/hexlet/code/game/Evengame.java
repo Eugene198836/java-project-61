@@ -7,7 +7,7 @@ public class Evengame {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Engine.checkStringValues(name, "Even");
     }
-    public static boolean evenCheker(int number) {
+    public static boolean evenCheker(int number) { // Проверяем число на четность.
         if (number % 2 != 0) {
             return false;
         }

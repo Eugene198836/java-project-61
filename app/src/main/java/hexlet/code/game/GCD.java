@@ -9,7 +9,7 @@ public class GCD {
         System.out.println("Find the greatest common divisor of given numbers.");
         Engine.checkIntValues(name, "GCD");
     }
-    public static int calculateGCD(int a, int b) {
+    public static int calculateGCD(int a, int b) { // Вычисляем наибольший общий делитель
         while (b != 0) {
             int tmp = a % b;
             a = b;
@@ -17,7 +17,8 @@ public class GCD {
         }
         return a;
     }
-    public static int createGCD() {
+    public static int createGCD() { // метод, который вызывается в классе Engine для вычисления
+        // НОД и присвоения результата переменной для сравнения.
         final int limitOfRandomNumbers = 100;
         var random1 = Util.random(limitOfRandomNumbers);
         var random2 = Util.random(limitOfRandomNumbers);

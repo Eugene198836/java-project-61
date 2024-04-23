@@ -29,16 +29,16 @@ make run-dist
 ```
 
 ## Asciinema game examples. ##
-### Greet: \
-https://asciinema.org/a/37SBkhW3V1f4kdhlVhouDYKm3 \
-### Even: \
-https://asciinema.org/a/zYw2wmRlJH6UFJIk3v6kXZyli \
-### Calc: \
-https://asciinema.org/a/4Rcr7BtKKlV4vpPzNpn4bRAfK \
-### GCD: \
-https://asciinema.org/a/2SnFZnZe9YX6mh6SlTkwodcnE \
-### Progression: \
-https://asciinema.org/a/sEDvcCBOINt6woBdldIm2YsyL \
-### Prime: \
+### Greet: 
+https://asciinema.org/a/37SBkhW3V1f4kdhlVhouDYKm3 
+### Even: 
+https://asciinema.org/a/zYw2wmRlJH6UFJIk3v6kXZyli 
+### Calc: 
+https://asciinema.org/a/4Rcr7BtKKlV4vpPzNpn4bRAfK 
+### GCD: 
+https://asciinema.org/a/2SnFZnZe9YX6mh6SlTkwodcnE 
+### Progression: 
+https://asciinema.org/a/sEDvcCBOINt6woBdldIm2YsyL 
+### Prime: 
 https://asciinema.org/a/e1yxWzcPC7wQ3vFMtvLoowTlA
 

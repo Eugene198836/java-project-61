@@ -7,7 +7,7 @@ import hexlet.code.game.Progression;
 import java.util.Scanner;
 
 public class Engine {
-
+//Метод для проверки игр с ответами ДА/НЕТ.
     public static void checkStringValues(String name, String methodName) {
         final int numberOfAnswers = 3;
         String userName = name;
@@ -18,21 +18,24 @@ public class Engine {
             String answer;
             int result = 0;
             var random = Util.random(limitOfRandomNumbers);
-            System.out.println("Question: " + random);
+            System.out.println("Question: " + random);// Вывод на экран вопроса.
+            //В зависимости от переданного в метод параметра, будет вычисляться результат - правильный ответ - с которым
+//будет сравниваться введенный ответ.
             if (methodName.equalsIgnoreCase("Even")) {
                 logResult = Evengame.evenCheker(random);
             } else if (methodName.equalsIgnoreCase("Prime")) {
                 logResult = Prime.primeCheck(random);
             }
+//Ввод своего ответа.
             answer = readPhrase(userName);
-            compareStringValues(answer, userName, logResult);
+            compareStringValues(answer, userName, logResult);// Сравнение введенного ответа с правильным.
             if (i == numberOfAnswers) {
                 System.out.println("Congratulations, " + userName + "!");
             }
         }
 
     }
-
+//Метод для проверки игр, где проводятся числовые операции.
     public static void checkIntValues(String name, String methodName) {
         String answer;
         String userName = name;
@@ -41,6 +44,8 @@ public class Engine {
         int answerToNumber;
         int i;
         for (i = 1; i <= numberOfAnswers; i++) {
+//В зависимости от переданного в метод параметра, будет вычисляться результат - правильный ответ - с которым
+//будет сравниваться введенный ответ.
             if (methodName.equalsIgnoreCase("Calc")) {
                 result = Calculator.randomExpression();
             } else if (methodName.equalsIgnoreCase("GCD")) {
@@ -50,29 +55,26 @@ public class Engine {
             } else {
                 break;
             }
-
+            // Ввод своего ответа.
             Scanner inPut = new Scanner(System.in);
             answer = inPut.next();
             answerToNumber = 0;
+            // Вывод сообщения, если введены не числа, а буквы и другие символы.
             try {
                 answerToNumber = Integer.parseInt(answer);
             } catch (NumberFormatException e) {
                 System.out.println("Enter the number");
-
             }
-            compareIntValues(answerToNumber, result, answer, userName);
+            compareIntValues(answerToNumber, result, answer, userName); // Сравнение введенного ответа с правильным.
             if (i == numberOfAnswers) {
-                System.out.println("Congratulations, " + userName + "!");
+                System.out.println("Congratulations, " + userName + "!");// Сообщение-поздравление, если даны 3 правильнрых ответа.
             }
         }
     }
 
-    public static String readString() {
-        Scanner inPut = new Scanner(System.in);
-        String answer = inPut.next();
-        return answer;
-    }
-
+//Метод для получения данных, типа "Строка", которые нужны для сравнения с правильным ответом. Также проверяет,
+    //чтобы были введены только ответы - ДА/Нет. В параметре метода используется "имя игрока", чтобы, в случае
+    //неправильного ответа, отобразилось сообещение с этим именем.
     public static String readPhrase(String userName) {
         Scanner inPut = new Scanner(System.in);
         String answer = inPut.next();
@@ -81,26 +83,13 @@ public class Engine {
             System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no'.");
             System.out.println("Let's try again, " + userName + "!");
             System.exit(0);
-
         }
         return answer;
     }
 
-    public static int readInt() {
-// Ввод в консоль своего ответа
-        Scanner inPut = new Scanner(System.in);
-        String answer = inPut.next();
-        int answerToNumber = 0;
-
-
-        try {
-            answerToNumber = Integer.parseInt(answer);
-        } catch (NumberFormatException e) {
-            System.out.println("Enter the number");
-
-        }
-        return answerToNumber;
-    }
+    // Метод используется для сравнения введенных ответов с правильными в вопросам, где проводятся операции над числами.
+    // У метода 4 параметра - введенный ответ, правильный ответ, переменная со строковыми данными для сообщения
+    //в случае неверного ответа, и переменная с именем.
     public static void compareIntValues(int answerToNumber, int result, String answer, String userName) {
         if (result == answerToNumber) {
             System.out.println("Your answer: " + answer);
@@ -111,6 +100,9 @@ public class Engine {
             System.exit(0);
         }
     }
+    // Метод используется для сравнения введенных ответов с правильными в вопросам, типа ДА/НЕТ.
+    //У метода 3 параметра - введенный ответ, введенное имя и "флажок". Флажок показывает, является ли число
+    //четным, простым и т.д.
     public static void compareStringValues(String answer, String userName, boolean logResult) {
         if (answer.equalsIgnoreCase("yes")) {
             if (logResult) {
