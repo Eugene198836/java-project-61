@@ -1,3 +1,5 @@
+# Brain games.
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Eugene198836/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Eugene198836/java-project-61/actions)
 
@@ -27,16 +29,16 @@ make run-dist
 ```
 
 ## Asciinema game examples. ##
-###Greet:### \
+### Greet: \
 https://asciinema.org/a/37SBkhW3V1f4kdhlVhouDYKm3 \
-###Even:### \
+### Even: \
 https://asciinema.org/a/zYw2wmRlJH6UFJIk3v6kXZyli \
-###Calc:### \
+### Calc: \
 https://asciinema.org/a/4Rcr7BtKKlV4vpPzNpn4bRAfK \
-###GCD:### \
+### GCD: \
 https://asciinema.org/a/2SnFZnZe9YX6mh6SlTkwodcnE \
-###Progression:### \
+### Progression: \
 https://asciinema.org/a/sEDvcCBOINt6woBdldIm2YsyL \
-###Prime: \
+### Prime: \
 https://asciinema.org/a/e1yxWzcPC7wQ3vFMtvLoowTlA
 

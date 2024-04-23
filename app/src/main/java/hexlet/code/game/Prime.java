@@ -12,6 +12,9 @@ public class Prime {
         if (numb < 2) {
             return false;
         }
+        if (numb == 4) {
+            return false;
+        }
         for (int i = 2; i < numb / 2; i++) {
             if (numb % i == 0) {
                 return false;
