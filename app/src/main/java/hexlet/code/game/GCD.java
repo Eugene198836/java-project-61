@@ -5,9 +5,20 @@ import hexlet.code.Util;
 public class GCD {
     public static void gcd() {
 // Вывод на экран приветствия.
-        String name = Greet.introduce();
+        String userName = Engine.introduce();
         System.out.println("Find the greatest common divisor of given numbers.");
-        Engine.checkIntValues(name, "GCD");
+        String[][] numbers = new String[3][2];
+        final int rounds = 3;
+        final int limitOfNumbers = 100;
+        for (int i = 0; i < rounds; i++) {
+            int random1 = Util.random(limitOfNumbers);
+            int random2 = Util.random(limitOfNumbers);
+            int gcdNumber = calculateGCD(random1, random2);
+            String gcdNumberToString = Integer.toString(gcdNumber);
+            numbers[i][0] = "Question: " + random1 + " " + random2;
+            numbers[i][1] = gcdNumberToString;
+        }
+        Engine.checkAnswers(numbers, userName);
     }
     public static int calculateGCD(int a, int b) { // Вычисляем наибольший общий делитель
         while (b != 0) {
@@ -16,14 +27,5 @@ public class GCD {
             b = tmp;
         }
         return a;
-    }
-    public static int createGCD() { // метод, который вызывается в классе Engine для вычисления
-        // НОД и присвоения результата переменной для сравнения.
-        final int limitOfRandomNumbers = 100;
-        var random1 = Util.random(limitOfRandomNumbers);
-        var random2 = Util.random(limitOfRandomNumbers);
-        System.out.println("Question: " + random1 + " " + random2);
-        var result = GCD.calculateGCD(random1, random2);
-        return result;
     }
 }
