@@ -23,7 +23,7 @@ public class Progression {
             for (int j = 1; j < lengthOfLine; j++) {
                 result = result + stepNumber;
                 if (j == replaceNumber) {
-                    line = line + ".. ";
+                    line = line + ".." + " ";
                     unknownNumber = result;
                 } else {
                     line = line + result + " ";
