@@ -25,19 +25,19 @@ public class App {
                 Engine.introduce();
                 break;
             case "2":
-                Evengame.evenNum();
+                Evengame.game();
                 break;
             case "3":
-                Calculator.calculate();
+                Calculator.game();
                 break;
             case "4":
-                GCD.gcd();
+                GCD.game();
                 break;
             case "5":
-                Progression.progression();
+                Progression.game();
                 break;
             case "6":
-                Prime.primeNumber();
+                Prime.game();
                 break;
             case "0":
                 System.out.println("Good bye.");

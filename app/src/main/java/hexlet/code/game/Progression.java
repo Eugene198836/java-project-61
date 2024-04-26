@@ -2,15 +2,13 @@ package hexlet.code.game;
 import hexlet.code.Engine;
 import hexlet.code.Util;
 public class Progression {
-// Метод создает числовую последовательность со случайными числами, где одно из чисел в этой
-// последовательсти будет скрыто, и создает двумерный массив - 3 строки по 2 в каждой - с этими
-// данными в типе String и отправляет на проверку в класс Engine.
-    public static void progression() {
-// Вывод на экран приветствия.
-        String userName = Engine.introduce();
-        System.out.println("What number is missing in the progression?");
-        final int rounds = 3;
-// Создаем массив 3х2.
+    public static void game() {
+        String intro = "What number is missing in the progression?";
+        String[][] numberLine = getNumberLine();
+        Engine.checkAnswers(numberLine, intro);
+    }
+    private static String[][] getNumberLine() {
+        int rounds = Engine.getRoundNumber();
         String[][] numberLine = new String[rounds][2];
         final int limitOfRandomNumbers = 100;
         final int limitOfStepNumbers = 10;
@@ -35,15 +33,11 @@ public class Progression {
                 } else {
                     line = line + result + " ";
                 }
-
+                String unknownNumberToString = Integer.toString(unknownNumber);
+                numberLine[i][0] = line;
+                numberLine[i][1] = unknownNumberToString;
             }
-// Преобразовываем скрытое число в строковый тип.
-            String unknownNumberToString = Integer.toString(unknownNumber);
-// В первый элемент строки массива сохраняем вопрос - числовую последовательсть.
-            numberLine[i][0] = line;
-// Во второй элемент строки массива сохраняем ответ - скрытое число.
-            numberLine[i][1] = unknownNumberToString;
         }
-        Engine.checkAnswers(numberLine, userName);
+        return numberLine;
     }
 }

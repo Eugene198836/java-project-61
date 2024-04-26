@@ -2,16 +2,18 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+    final static int ROUND_NUMBER = 3;
 // Метод принимает на вход два параметра - введенное имя и двумерный массив(3 строки по 2 элимента)
 // с данными типа Строка. Первый элемент строки содержит вопрос, второй правильный ответ.
 
-    public static void checkAnswers(String[][] arrayToCompare, String name) {
-        final int numberOfAnswers = 2;
+    public static void checkAnswers(String[][] arrayToCompare, String intro) {
+
 // Примаем переданые на вход данные и сохраняем в соответствующие переменные.
-        String userName = name;
+        String userName  = introduce();
+        System.out.println(intro);
         String[][] arrayToCheck = arrayToCompare;
         int i;
-        for (i = 0; i <= numberOfAnswers; i++) {
+        for (i = 0; i < ROUND_NUMBER; i++) {
 // Выводим на экран первый элемент - вопрос.
             System.out.println(arrayToCheck[i][0]);
 // Вводим свой ответ.
@@ -27,7 +29,7 @@ public class Engine {
                 break;
             }
 // При наборе 3 правильных ответов, выводится поздравительное сообщение.
-            if (i == numberOfAnswers) {
+            if (i == ROUND_NUMBER - 1) {
                 System.out.println("Congratulations, " + userName + "!");
             }
         }
@@ -40,5 +42,8 @@ public class Engine {
         String userName = yourName.next();
         System.out.println("Hello, " + userName + "!");
         return userName;
+    }
+    public static int getRoundNumber () {
+       return ROUND_NUMBER;
     }
 }

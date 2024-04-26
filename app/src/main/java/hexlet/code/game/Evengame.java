@@ -5,30 +5,27 @@ import hexlet.code.Util;
 public class Evengame {
     // Метод создает двумерный массив - 3 строки по 2 в каждой - с данными типа String и отправляет
 // на проверку в класс Engine.
-    public static void evenNum() {
-// Вывод на экран приветствия.
-        String userName = Engine.introduce();
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        final int rounds = 3;
-        // Создаем массив 3х2.
-        String[][] yesNo = new String[rounds][2];
+    public static void game() {
+        String intro = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        String[][] yesNo = getNumber();
+        Engine.checkAnswers(yesNo, intro);
+    }
+    private static String[][] getNumber() {
+        int rounds = Engine.getRoundNumber();
+        String[][] evenNumber = new String[rounds][2];
         final int limitOfNumbers = 100;
         for (int i = 0; i < rounds; i++) {
-// Заполням массив.
             int random = Util.random(limitOfNumbers);
             String randomToString = Integer.toString(random);
-// В первый элемент строки массива сохраняем вопрос.
-            yesNo[i][0] = "Question: " + randomToString;
-// Во второй элемент строки массива сохраняем ответ.
+            evenNumber[i][0] = "Question: " + randomToString;
             boolean a = evenCheker(random);
             if (a) {
-                yesNo[i][1] = "yes";
+                evenNumber[i][1] = "yes";
             } else {
-                yesNo[i][1] = "no";
+                evenNumber[i][1] = "no";
             }
         }
-        Engine.checkAnswers(yesNo, userName);
-
+        return evenNumber;
     }
     public static boolean evenCheker(int number) { // Проверяем число на четность.
         if (number % 2 != 0) {

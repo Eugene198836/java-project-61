@@ -5,21 +5,20 @@ import hexlet.code.Util;
 public class Prime {
 // Метод создает двумерный массив - 3 строки по 2 в каждой - с данными типа String и отправляет
 // на проверку в класс Engine.
-    public static void primeNumber() {
+    public static void game() {
 // Вывод на экран приветствия.
-        String userName = Engine.introduce();
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        final int rounds = 3;
-// Создаем массив 3х2.
+        String intro = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        String[][] numbers = getPrime();
+        Engine.checkAnswers(numbers, intro);
+    }
+    private static String[][] getPrime() {
+        int rounds = Engine.getRoundNumber();
         String[][] yesNo = new String[rounds][2];
         final int limitOfNumbers = 100;
         for (int i = 0; i < rounds; i++) {
-// Заполням массив.
             int random = Util.random(limitOfNumbers);
             String randomToString = Integer.toString(random);
-// В первый элемент строки массива сохраняем вопрос.
             yesNo[i][0] = "Question: " + randomToString;
-// Во второй элемент строки массива сохраняем ответ.
             boolean a = primeCheck(random);
             if (a) {
                 yesNo[i][1] = "yes";
@@ -27,9 +26,7 @@ public class Prime {
                 yesNo[i][1] = "no";
             }
         }
-// Отправляем в класс Engine введенное имя и массив.
-        Engine.checkAnswers(yesNo, userName);
-
+        return yesNo;
     }
     public static boolean primeCheck(int numb) { // определяем простое число и возвращаем результат для сравнения.
         if (numb < 2) {

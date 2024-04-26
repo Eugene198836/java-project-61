@@ -6,24 +6,26 @@ public class Calculator {
     // числами, вычисляет его результат и
     // создает двумерный массив - 3 строки по 2 в каждой - с этими данными в типе String и отправляет
 // на проверку в класс Engine.
-    public static void calculate() {
-// Вывод на экран приветствия.
-        String userName = Engine.introduce();
-        System.out.println("What is the result of the expression?");
-        final int rounds = 3;
-// Создаем массив 3х2.
-        String[][] expression = new String[rounds][2];
-        final int limitOfNumbers = 100;
+    public static void game() {
+        String intro = "What is the result of the expression?";
+        String[][] expression = getExpression();
+        Engine.checkAnswers(expression, intro);
+    }
+    private static String getRandomOperator() {
         final int limitOfOperators = 3;
-// Создаем массив с арифметическими операторами.
         String[] operators = {"+", "-", "*"};
+        int random3 = Util.random(limitOfOperators);
+        String randomOperator = operators[random3];
+        return randomOperator;
+    }
+    private static String[][] getExpression() {
+        final int limitOfNumbers = 100;
+        int rounds = Engine.getRoundNumber();
+        String[][] expression = new String[rounds][2];
         for (int i = 0; i < rounds; i++) {
-// Генерируем выражение со случайнми числами и случайно выбранными операторами.
-// Также вычисялем результат операции
             int random1 = Util.random(limitOfNumbers);
             int random2 = Util.random(limitOfNumbers);
-            int random3 = Util.random(limitOfOperators);
-            String randomOperator = operators[random3];
+            String randomOperator = getRandomOperator();
             int result = 0;
             switch (randomOperator) {
                 case "+" :
@@ -40,14 +42,10 @@ public class Calculator {
                 default:
                     break;
             }
-// Результат операции преобразовываем в тип String.
             String resultToString = Integer.toString(result);
-// В первый элемент строки массива сохраняем вопрос - арифметическое выражение.
             expression[i][0] = "Question: " + random1 + " " + randomOperator + " " + random2;
-// Во втрой элемент строки массива сохраняем правильный ответ - результат вычисления.
             expression[i][1] = resultToString;
         }
-// Отправляем массив в класс Engine.
-        Engine.checkAnswers(expression, userName);
+        return expression;
     }
 }
