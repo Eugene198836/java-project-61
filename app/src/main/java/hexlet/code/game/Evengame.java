@@ -7,7 +7,8 @@ public class Evengame {
 // Вывод на экран приветствия.
         String userName = Engine.introduce();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        String[][] yesNo = new String[3][2];
+        final int numberOfQuestions = 3;
+        String[][] yesNo = new String[numberOfQuestions][2];
         final int rounds = 3;
         final int limitOfNumbers = 100;
         for (int i = 0; i < rounds; i++) {

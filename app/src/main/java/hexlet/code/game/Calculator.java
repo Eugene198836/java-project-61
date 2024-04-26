@@ -6,7 +6,8 @@ public class Calculator {
 // Вывод на экран приветствия.
         String userName = Engine.introduce();
         System.out.println("What is the result of the expression?");
-        String[][] expression = new String[3][2];
+        final int numberOfQuestions = 3;
+        String[][] expression = new String[numberOfQuestions][2];
         final int rounds = 3;
         final int limitOfNumbers = 100;
         final int limitOfOperators = 3;

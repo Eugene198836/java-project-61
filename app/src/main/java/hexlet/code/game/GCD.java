@@ -7,7 +7,8 @@ public class GCD {
 // Вывод на экран приветствия.
         String userName = Engine.introduce();
         System.out.println("Find the greatest common divisor of given numbers.");
-        String[][] numbers = new String[3][2];
+        final int numberOfQuestions = 3;
+        String[][] numbers = new String[numberOfQuestions][2];
         final int rounds = 3;
         final int limitOfNumbers = 100;
         for (int i = 0; i < rounds; i++) {

@@ -5,7 +5,8 @@ public class Progression {
     public static void progression() {
         String userName = Engine.introduce();
         System.out.println("What number is missing in the progression?");
-        String[][] numberLine = new String[3][2];
+        final int numberOfQuestions = 3;
+        String[][] numberLine = new String[numberOfQuestions][2];
         final int rounds = 3;
         final int limitOfRandomNumbers = 100;
         final int limitOfStepNumbers = 10;
