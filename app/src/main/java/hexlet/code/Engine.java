@@ -2,7 +2,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    final static int ROUND_NUMBER = 3;
+    static final int ROUND_NUMBER = 3;
 // Метод принимает на вход два параметра - введенное имя и двумерный массив(3 строки по 2 элимента)
 // с данными типа Строка. Первый элемент строки содержит вопрос, второй правильный ответ.
 
@@ -43,7 +43,7 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         return userName;
     }
-    public static int getRoundNumber () {
+    public static int getRoundNumber() {
        return ROUND_NUMBER;
     }
 }
