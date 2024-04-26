@@ -36,7 +36,7 @@ public class Calculator {
                     break;
                 case "*" :
                     result = random1 * random2;
-                    expression[i][0] = "Question: " + random1 + " * "+ random2;
+                    expression[i][0] = "Question: " + random1 + " * " + random2;
                 default:
                     break;
             }
