@@ -9,8 +9,8 @@ public class Progression {
         final int rounds = 3;
         final int limitOfRandomNumbers = 100;
         final int limitOfStepNumbers = 10;
-        final int limitOfReplaceNumbers = 10;
-        final int lengthOfLine = 10;
+        final int limitOfReplaceNumbers = 9;
+        final int lengthOfLine = 9;
         int result;
         String line;
         int unknownNumber = 0;
@@ -18,16 +18,17 @@ public class Progression {
             int startPoint = Util.random(limitOfRandomNumbers);
             int stepNumber = 1 + Util.random(limitOfStepNumbers);
             int replaceNumber = Util.random(limitOfReplaceNumbers);
-            line = "Qestion: " + startPoint + " ";
             result = startPoint;
-            for (int j = 1; j < lengthOfLine; j++) {
+            line = "Question: " + result + " ";
+            for (int j = 0; j < lengthOfLine; j++) {
                 result = result + stepNumber;
                 if (j == replaceNumber) {
-                    line = line + ".." + " ";
+                    line = line + ".. ";
                     unknownNumber = result;
                 } else {
                     line = line + result + " ";
                 }
+
             }
             String unknownNumberToString = Integer.toString(unknownNumber);
             numberLine[i][0] = line;
